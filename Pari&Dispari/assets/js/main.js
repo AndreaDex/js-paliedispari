@@ -14,7 +14,8 @@ function randomNumber() {
     
     return Math.floor((Math.random() * 5) + 1);
 }
-document.writeln("Il numero casuale è " + randomNumber() + "<br>");
+var random = randomNumber()
+document.writeln("Il numero casuale è " + random + "<br>");
 
 // Sommare il numero dell' utente con quello genrato casualmente e verificare se il risultato è pari o dispari
 /**
@@ -31,12 +32,11 @@ function verificaPari(num1, num2) {
     }
     return "dispari";
 }
-console.log(verificaPari(userNumber, randomNumber()));
-
 
 // Comunicare all' utente il risultato
-document.writeln("La somma dei numeri è " +(userNumber + randomNumber()) + "<br>")
-if (verificaPari(userNumber, randomNumber()) === userChoice) {
+var esito = verificaPari(userNumber, random)
+document.writeln("La somma dei numeri è " +(userNumber + random) + "<br>")
+if (esito === userChoice) {
     document.writeln("Complimenti! Hai vinto");
 } else {
     document.writeln("Mi dispiace, ritenta!");
